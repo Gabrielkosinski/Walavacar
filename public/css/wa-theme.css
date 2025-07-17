@@ -1,0 +1,788 @@
+/* 🎨 WaLavacar - Tema WA Auto Premier (Preto/Vermelho) */
+
+:root {
+    /* 🔴 Paleta de Cores WA Auto Premier */
+    --wa-red-primary: #C53030;      /* Vermelho principal da logo */
+    --wa-red-secondary: #E53E3E;    /* Vermelho mais claro */
+    --wa-red-dark: #9B2C2C;         /* Vermelho escuro */
+    --wa-red-light: #FED7D7;        /* Vermelho claro para backgrounds */
+    
+    --wa-black-primary: #1A1A1A;    /* Preto principal */
+    --wa-black-secondary: #2D2D2D;  /* Preto secundário */
+    --wa-black-light: #3A3A3A;      /* Preto claro */
+    --wa-black-card: #262626;       /* Preto para cards */
+    
+    --wa-white-primary: #FFFFFF;    /* Branco puro */
+    --wa-white-secondary: #F7FAFC;  /* Branco secundário */
+    --wa-white-muted: #E2E8F0;      /* Branco acinzentado */
+    
+    /* 🌟 Cores de Acento */
+    --wa-accent-gold: #D69E2E;      /* Dourado para destaques */
+    --wa-accent-silver: #A0AEC0;    /* Prata para elementos secundários */
+    
+    /* 🎯 Estados */
+    --wa-success: #38A169;
+    --wa-warning: #D69E2E;
+    --wa-error: #E53E3E;
+    --wa-info: #3182CE;
+}
+
+/* 🖤 Background Principal Preto */
+body {
+    background: var(--wa-black-primary) !important;
+    color: var(--wa-white-primary) !important;
+    min-height: 100vh;
+}
+
+/* 🌟 Background com Gradiente Sutil */
+.bg-dark-gradient {
+    background: linear-gradient(135deg, var(--wa-black-primary) 0%, var(--wa-black-secondary) 100%);
+}
+
+/* 📱 Container Principal */
+.min-h-screen {
+    background: var(--wa-black-primary) !important;
+}
+
+/* 🎨 Glass Morphism Escuro */
+.glass {
+    background: rgba(45, 45, 45, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--wa-white-primary) !important;
+}
+
+.glass:hover {
+    background: rgba(58, 58, 58, 0.9) !important;
+    border: 1px solid rgba(197, 48, 48, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(197, 48, 48, 0.2) !important;
+}
+
+/* 🔴 Cards com Tema WA */
+.wa-card {
+    background: var(--wa-black-card);
+    border: 1px solid rgba(197, 48, 48, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    color: var(--wa-white-primary);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.wa-card:hover {
+    border-color: var(--wa-red-primary);
+    box-shadow: 0 12px 40px rgba(197, 48, 48, 0.3);
+    transform: translateY(-2px);
+}
+
+/* 🎯 Header Escuro */
+header {
+    background: var(--wa-black-secondary) !important;
+    border-bottom: 1px solid rgba(197, 48, 48, 0.2) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 🔴 Navegação com Tema WA */
+nav {
+    background: var(--wa-black-secondary) !important;
+}
+
+nav a {
+    color: var(--wa-white-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--wa-red-primary) !important;
+    background: rgba(197, 48, 48, 0.1) !important;
+}
+
+nav a.active {
+    color: var(--wa-red-primary) !important;
+    background: rgba(197, 48, 48, 0.2) !important;
+}
+
+/* 🌟 Botões com Tema WA Auto Premier */
+.btn-wa-primary {
+    background: linear-gradient(135deg, var(--wa-red-primary) 0%, var(--wa-red-dark) 100%);
+    border: 1px solid var(--wa-red-primary);
+    color: var(--wa-white-primary);
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(197, 48, 48, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-wa-primary:hover {
+    background: linear-gradient(135deg, var(--wa-red-secondary) 0%, var(--wa-red-primary) 100%);
+    box-shadow: 0 12px 35px rgba(197, 48, 48, 0.5);
+    transform: translateY(-2px);
+    color: var(--wa-white-primary);
+}
+
+.btn-wa-secondary {
+    background: var(--wa-black-secondary);
+    border: 1px solid rgba(197, 48, 48, 0.3);
+    color: var(--wa-white-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-wa-secondary:hover {
+    background: var(--wa-red-primary);
+    border-color: var(--wa-red-primary);
+    color: var(--wa-white-primary);
+    transform: translateY(-1px);
+}
+
+.btn-wa-outline {
+    background: transparent;
+    border: 2px solid var(--wa-red-primary);
+    color: var(--wa-red-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-wa-outline:hover {
+    background: var(--wa-red-primary);
+    color: var(--wa-white-primary);
+    box-shadow: 0 8px 25px rgba(197, 48, 48, 0.4);
+}
+
+/* 🔴 Classes de Botões WA - Continuação */
+.btn-outline-wa {
+    background: transparent !important;
+    border: 2px solid var(--wa-red-primary) !important;
+    color: var(--wa-red-primary) !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-wa:hover {
+    background: var(--wa-red-primary) !important;
+    color: var(--wa-white-primary) !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(197, 48, 48, 0.4);
+}
+
+.btn-secondary-wa {
+    background: var(--wa-black-secondary) !important;
+    border: 1px solid rgba(197, 48, 48, 0.3) !important;
+    color: var(--wa-white-primary) !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-wa:hover {
+    background: var(--wa-black-light) !important;
+    border-color: var(--wa-red-primary) !important;
+    transform: scale(1.02);
+}
+
+.btn-ultra-premium.wa-theme {
+    background: linear-gradient(135deg, var(--wa-red-primary) 0%, var(--wa-black-secondary) 50%, var(--wa-red-dark) 100%);
+    box-shadow: 
+        0 15px 35px rgba(197, 48, 48, 0.4),
+        0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(197, 48, 48, 0.3);
+}
+
+.btn-ultra-premium.wa-theme:hover {
+    background: linear-gradient(135deg, var(--wa-red-secondary) 0%, var(--wa-black-light) 50%, var(--wa-red-primary) 100%);
+    box-shadow: 
+        0 20px 50px rgba(197, 48, 48, 0.5),
+        0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.btn-holographic.wa-theme {
+    background: linear-gradient(45deg, var(--wa-red-primary), var(--wa-black-secondary), var(--wa-red-dark), var(--wa-black-light), var(--wa-red-secondary));
+    background-size: 400% 400%;
+}
+
+/* 🏆 Cards de Estatísticas com Tema WA */
+.wa-stat-card {
+    background: linear-gradient(135deg, var(--wa-black-card) 0%, var(--wa-black-secondary) 100%);
+    border: 1px solid rgba(197, 48, 48, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    color: var(--wa-white-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.wa-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--wa-red-primary), var(--wa-red-secondary));
+}
+
+.wa-stat-card:hover {
+    border-color: var(--wa-red-primary);
+    box-shadow: 0 12px 40px rgba(197, 48, 48, 0.3);
+    transform: translateY(-3px);
+}
+
+.wa-stat-card .stat-number {
+    color: var(--wa-red-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.wa-stat-card .stat-label {
+    color: var(--wa-white-secondary);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 🎯 Inputs e Forms com Tema WA */
+input, textarea, select {
+    background: var(--wa-black-secondary) !important;
+    border: 1px solid rgba(197, 48, 48, 0.3) !important;
+    color: var(--wa-white-primary) !important;
+    border-radius: 8px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.2) !important;
+    outline: none !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* 🌟 Labels */
+label {
+    color: var(--wa-white-primary) !important;
+    font-weight: 600;
+}
+
+/* 📊 Tabelas com Tema WA */
+table {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+}
+
+th {
+    background: var(--wa-black-secondary) !important;
+    color: var(--wa-red-primary) !important;
+    border-bottom: 2px solid var(--wa-red-primary) !important;
+}
+
+td {
+    border-bottom: 1px solid rgba(197, 48, 48, 0.2) !important;
+}
+
+tr:hover {
+    background: rgba(197, 48, 48, 0.1) !important;
+}
+
+/* 🎯 Classes WA para Tabelas e Listas */
+.wa-table-row {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+    border: 1px solid rgba(197, 48, 48, 0.2) !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wa-table-row:hover {
+    background: rgba(197, 48, 48, 0.1) !important;
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 4px 16px rgba(197, 48, 48, 0.3) !important;
+}
+
+.wa-card-inner {
+    background: rgba(45, 45, 45, 0.8) !important;
+    color: var(--wa-white-primary) !important;
+    border: 1px solid rgba(197, 48, 48, 0.3) !important;
+}
+
+.wa-card-stats {
+    background: var(--wa-black-card) !important;
+    border: 1px solid rgba(197, 48, 48, 0.2) !important;
+    color: var(--wa-white-primary) !important;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 0.6s ease-out;
+}
+
+.wa-card-stats:hover {
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 8px 25px rgba(197, 48, 48, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+.wa-page-header {
+    background: transparent !important;
+    color: var(--wa-white-primary) !important;
+}
+
+.wa-brand-text {
+    color: var(--wa-white-primary) !important;
+}
+
+.wa-button-red {
+    background: var(--wa-red-primary) !important;
+    color: var(--wa-white-primary) !important;
+    border: none !important;
+}
+
+/* 🔴 Classes de Botões WA */
+.btn-primary-red {
+    background: linear-gradient(135deg, var(--wa-red-primary) 0%, var(--wa-red-dark) 100%) !important;
+    color: var(--wa-white-primary) !important;
+    border: none !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-red:hover {
+    background: linear-gradient(135deg, var(--wa-red-secondary) 0%, var(--wa-red-primary) 100%) !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(197, 48, 48, 0.4);
+}
+
+.btn-primary-pro {
+    background: linear-gradient(135deg, var(--wa-red-primary) 0%, var(--wa-red-dark) 100%) !important;
+    color: var(--wa-white-primary) !important;
+    border: none !important;
+    font-weight: 700;
+    box-shadow: 0 8px 25px rgba(197, 48, 48, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-pro:hover {
+    background: linear-gradient(135deg, var(--wa-red-secondary) 0%, var(--wa-red-primary) 100%) !important;
+    box-shadow: 0 12px 35px rgba(197, 48, 48, 0.5);
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* 🎭 Modal Styles - WA Theme */
+.wa-modal-style {
+    border: 2px solid #dc2626 !important;
+    box-shadow: 0 25px 50px rgba(220, 38, 38, 0.3) !important;
+}
+
+.wa-modal-style .swal2-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.wa-modal-style .swal2-content {
+    color: #e5e7eb !important;
+}
+
+.wa-modal-style .swal2-select {
+    background: #374151 !important;
+    border: 2px solid #4b5563 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 10px !important;
+    font-size: 14px !important;
+}
+
+.wa-modal-style .swal2-select:focus {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+    outline: none !important;
+}
+
+.wa-modal-style .swal2-select option {
+    background: #374151 !important;
+    color: #ffffff !important;
+}
+
+.wa-modal-style .swal2-input {
+    background: #374151 !important;
+    border: 2px solid #4b5563 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+}
+
+.wa-modal-style .swal2-input:focus {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.wa-modal-style .swal2-validation-message {
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+}
+
+/* Modal Buttons Enhancement */
+.btn-primary-pro {
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary-pro:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4) !important;
+}
+
+.btn-secondary {
+    background: #6b7280 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+}
+
+.btn-secondary:hover {
+    background: #4b5563 !important;
+}
+
+/* Form enhancements inside modals */
+.wa-form-section {
+    text-align: left !important;
+}
+
+.wa-form-section label {
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-weight: 500 !important;
+}
+
+.wa-select, .wa-input {
+    width: 100% !important;
+    padding: 12px !important;
+    background: #374151 !important;
+    border: 2px solid #4b5563 !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease !important;
+}
+
+.wa-select:focus, .wa-input:focus {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+    outline: none !important;
+}
+
+.wa-select option {
+    background: #374151 !important;
+    color: #ffffff !important;
+    padding: 8px !important;
+}
+
+/* Animation enhancements */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate__slideInDown {
+    animation: slideInDown 0.3s ease-out;
+}
+
+/* 🌟 Animações */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
+
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.btn-mobile-pro {
+    box-shadow: 
+        0 10px 40px rgba(197, 48, 48, 0.4),
+        0 0 0 1px rgba(197, 48, 48, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn-mobile-pro:hover {
+    box-shadow: 
+        0 15px 50px rgba(197, 48, 48, 0.5),
+        0 0 0 1px rgba(197, 48, 48, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 🎨 Estados de Loading */
+.loading-wa {
+    background: linear-gradient(90deg, 
+        var(--wa-black-secondary) 0%, 
+        var(--wa-red-primary) 50%, 
+        var(--wa-black-secondary) 100%
+    );
+    background-size: 200% 100%;
+    animation: loading-wa 1.5s infinite;
+}
+
+@keyframes loading-wa {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* 🔴 Bordas Vermelhas para Elementos Ativos */
+.wa-active {
+    border: 2px solid var(--wa-red-primary);
+    box-shadow: 0 0 10px rgba(197, 48, 48, 0.3);
+}
+
+/* 🎯 Gradientes de Background Alternativos */
+.wa-bg-pattern {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(197, 48, 48, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(197, 48, 48, 0.1) 0%, transparent 50%),
+        var(--wa-black-primary);
+}
+
+/* 🌟 Efeito de Brilho WA */
+.wa-glow {
+    box-shadow: 
+        0 0 20px rgba(197, 48, 48, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.wa-glow:hover {
+    box-shadow: 
+        0 0 30px rgba(197, 48, 48, 0.5),
+        0 0 50px rgba(197, 48, 48, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* 🏆 Cards Premium com Logo Style */
+.wa-premium-card {
+    background: linear-gradient(135deg, 
+        var(--wa-black-card) 0%, 
+        rgba(197, 48, 48, 0.1) 50%, 
+        var(--wa-black-secondary) 100%
+    );
+    border: 1px solid rgba(197, 48, 48, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.wa-premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        transparent 30%, 
+        rgba(197, 48, 48, 0.1) 50%, 
+        transparent 70%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.wa-premium-card:hover::before {
+    transform: translateX(100%);
+}
+
+/* 🚨 OVERRIDE FORÇADO - Garantir tema escuro em TUDO */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--wa-red-primary) var(--wa-black-secondary);
+}
+
+/* Remove qualquer fundo branco que possa existir */
+.bg-white,
+div[class*="bg-white"],
+.bg-gray-50,
+.bg-gray-100,
+div[class*="bg-gray-"],
+.bg-slate-50,
+.bg-slate-100,
+div[class*="bg-slate-"] {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+}
+
+/* Força texto branco em elementos que possam ter texto escuro */
+.text-gray-900,
+.text-gray-800,
+.text-gray-700,
+.text-black,
+div[class*="text-gray-9"],
+div[class*="text-gray-8"],
+div[class*="text-gray-7"],
+div[class*="text-black"] {
+    color: var(--wa-white-primary) !important;
+}
+
+/* Força fundo escuro em cards e containers */
+.card,
+.container,
+.content,
+[class*="card"],
+[class*="container"],
+[class*="content"] {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+}
+
+/* 🎯 FILA DE ESPERA - Override específico */
+.wa-card .space-y-3 > div,
+.wa-table-row,
+div[class*="wa-table-row"] {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+    border: 1px solid rgba(197, 48, 48, 0.2) !important;
+}
+
+/* Força texto branco em todos os elementos da fila */
+.wa-card * {
+    color: var(--wa-white-primary) !important;
+}
+
+.wa-card .text-gray-300 {
+    color: #D1D5DB !important;
+}
+
+.wa-card .text-gray-400 {
+    color: #9CA3AF !important;
+}
+
+/* 🔴 Override para seções Em Andamento e Prontos */
+.bg-gradient-to-br {
+    background: var(--wa-black-card) !important;
+}
+
+.from-orange-50,
+.to-orange-100,
+.from-green-50,
+to-emerald-100 {
+    background: var(--wa-black-card) !important;
+}
+
+.border-orange-200,
+.border-green-200 {
+    border-color: rgba(197, 48, 48, 0.3) !important;
+}
+
+/* Força tema escuro em todos os elementos filhos */
+.from-orange-50 *,
+.to-orange-100 *,
+.from-green-50 *,
+to-emerald-100 * {
+    color: var(--wa-white-primary) !important;
+}
+
+.bg-white {
+    background: var(--wa-black-card) !important;
+}
+
+/* 🌟 Gradientes de destaque mantendo o tema escuro */
+.bg-gradient-to-br.from-orange-50.to-orange-100 {
+    background: linear-gradient(135deg, 
+        rgba(197, 48, 48, 0.2) 0%, 
+        var(--wa-black-card) 50%, 
+        rgba(197, 48, 48, 0.1) 100%) !important;
+}
+
+.bg-gradient-to-br.from-green-50.to-emerald-100 {
+    background: linear-gradient(135deg, 
+        rgba(56, 161, 105, 0.2) 0%, 
+        var(--wa-black-card) 50%, 
+        rgba(56, 161, 105, 0.1) 100%) !important;
+}
+
+.bg-gradient-to-br.from-slate-100.to-slate-200 {
+    background: linear-gradient(135deg, 
+        var(--wa-black-secondary) 0%, 
+        var(--wa-black-card) 50%, 
+        var(--wa-black-light) 100%) !important;
+}
+
+/* 💪 Override ultra-forte para garantir tema WA */
+body *:not(.text-red-500):not(.text-red-400):not(.text-green-400):not(.text-yellow-400):not(.text-blue-500) {
+    color: var(--wa-white-primary) !important;
+}
+
+/* Exceções para textos coloridos intencionais */
+.text-red-500,
+.text-red-400,
+.text-red-600,
+.text-green-400,
+.text-green-500,
+.text-green-600,
+.text-yellow-400,
+.text-yellow-500,
+.text-orange-600,
+.text-blue-500,
+.text-purple-600,
+.text-indigo-600 {
+    filter: brightness(1.1);
+}
+
+/* 🎨 Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--wa-black-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--wa-red-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--wa-red-secondary);
+}

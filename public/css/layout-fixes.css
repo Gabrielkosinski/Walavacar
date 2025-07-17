@@ -1,0 +1,227 @@
+/* 📐 Correções Específicas de Layout - WaLavacar Dashboard */
+
+/* === RESETAR PROBLEMAS DE HERANÇA === */
+.wa-table-row * {
+    box-sizing: border-box !important;
+}
+
+/* === CONTAINER PRINCIPAL DA LINHA === */
+.wa-table-row {
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+    overflow: visible !important;
+    border-radius: 16px !important;
+    margin-bottom: 16px !important;
+}
+
+/* === CONTEÚDO INTERNO === */
+.wa-table-row .p-4.pt-5 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    padding: 20px !important;
+    gap: 20px !important;
+    width: 100% !important;
+    min-height: 120px !important;
+}
+
+/* === COLUNA ESQUERDA (Informações) === */
+.wa-table-row .flex-1 {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    min-width: 0 !important;
+    margin-right: 20px !important;
+}
+
+/* === COLUNA DIREITA (Valor + Botões) === */
+.wa-table-row .text-right.ml-4 {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    min-width: 200px !important;
+    margin-left: 0 !important;
+    gap: 12px !important;
+}
+
+/* === VALOR MONETÁRIO === */
+.text-2xl.font-bold.text-orange-400,
+.text-2xl.font-bold.text-green-400 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    margin-bottom: 12px !important;
+    white-space: nowrap !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+}
+
+/* === CONTAINER DOS BOTÕES === */
+.flex.flex-col.gap-2.relative.z-30 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+    align-items: stretch !important;
+}
+
+/* === BOTÕES INDIVIDUAIS === */
+.btn-primary-pro,
+.finalizar-btn,
+.registrar-pagamento-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 16px !important;
+    min-height: 48px !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    position: relative !important;
+    z-index: 50 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    border: none !important;
+    outline: none !important;
+    transition: all 0.2s ease !important;
+}
+
+/* === CONTEÚDO DOS BOTÕES === */
+.btn-primary-pro > div,
+.finalizar-btn > div,
+.registrar-pagamento-btn > div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+}
+
+/* === ÍCONES DOS BOTÕES === */
+.btn-primary-pro iconify-icon,
+.finalizar-btn iconify-icon,
+.registrar-pagamento-btn iconify-icon {
+    font-size: 18px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+
+/* === BOTÃO WHATSAPP === */
+.btn-outline-wa.whatsapp-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 12px !important;
+    min-height: 40px !important;
+    width: 100% !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border: 2px solid #25d366 !important;
+    background: rgba(37, 211, 102, 0.1) !important;
+    color: #25d366 !important;
+    transition: all 0.2s ease !important;
+    z-index: 50 !important;
+    pointer-events: auto !important;
+}
+
+.btn-outline-wa.whatsapp-btn:hover {
+    background: #25d366 !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* === INFORMAÇÕES DO CLIENTE === */
+.font-bold.text-white.text-lg {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+    color: white !important;
+}
+
+.text-gray-300 {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 6px !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    color: #d1d5db !important;
+}
+
+.text-gray-300 iconify-icon {
+    font-size: 16px !important;
+    margin-right: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+/* === RESPONSIVIDADE MOBILE === */
+@media (max-width: 768px) {
+    /* Layout empilhado no mobile */
+    .wa-table-row .p-4.pt-5 {
+        flex-direction: column !important;
+        gap: 16px !important;
+        padding: 16px !important;
+        min-height: auto !important;
+    }
+    
+    .wa-table-row .flex-1 {
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    
+    .wa-table-row .text-right.ml-4 {
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        min-width: auto !important;
+    }
+    
+    .text-2xl.font-bold.text-orange-400,
+    .text-2xl.font-bold.text-green-400 {
+        justify-content: center !important;
+        font-size: 20px !important;
+    }
+    
+    .btn-primary-pro,
+    .finalizar-btn,
+    .registrar-pagamento-btn,
+    .whatsapp-btn {
+        font-size: 16px !important;
+        min-height: 50px !important;
+        padding: 14px 20px !important;
+    }
+}
+
+/* === PREVENÇÃO DE CONFLITOS === */
+.group:hover .group-hover\:scale-105 {
+    transform: none !important;
+}
+
+.wa-table-row .absolute {
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+/* === GARANTIR CORES CORRETAS === */
+.btn-primary-pro {
+    background: linear-gradient(45deg, #dc2626, #b91c1c) !important;
+    color: white !important;
+}
+
+.btn-primary-pro:hover {
+    background: linear-gradient(45deg, #b91c1c, #991b1b) !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-primary-pro:active {
+    transform: translateY(0) scale(0.98) !important;
+}

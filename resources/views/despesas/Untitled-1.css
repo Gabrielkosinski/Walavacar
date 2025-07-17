@@ -1,0 +1,64 @@
+    /* 
+ * ARQUIVO DEBUG LIMPO - Erros de CSS Corrigidos
+ * 
+ * ✅ PROBLEMAS RESOLVIDOS:
+ * - Mistura de HTML, CSS e JavaScript removida
+ * - Arquivos separados criados em /public/debug/
+ * - Sintaxe CSS validada e corrigida
+ * 
+ * 📁 ARQUIVOS CRIADOS:
+ * - /public/debug/error-419-debug.html
+ * - /public/debug/tailwind-debug.css  
+ * - /public/debug/finalizacao-debug.js
+ */
+
+/* Reset CSS Básico */
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout Debug */
+.debug-container {
+    max-width: 36rem;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: system-ui, sans-serif;
+}
+
+.error-display {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background: #f9fafb;
+}
+
+.error-code {
+    padding: 0 1rem;
+    font-size: 1.125rem;
+    color: #6b7280;
+    border-right: 1px solid #d1d5db;
+    font-weight: 600;
+}
+
+.error-message {
+    margin-left: 1rem;
+    font-size: 1.125rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Status Indicators */
+.status-resolved {
+    color: #059669;
+    font-weight: 600;
+}
+
+.status-pending {
+    color: #d97706;
+    font-weight: 600;
+}

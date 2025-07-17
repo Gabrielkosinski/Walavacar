@@ -1,0 +1,37 @@
+{
+  "name": "WaLavacar - Sistema de Gestão",
+  "short_name": "WaLavacar",
+  "description": "Sistema de gestão para lava car multi-filiais",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "pt-BR",
+  "icons": [],
+  "shortcuts": [
+    {
+      "name": "Novo Atendimento",
+      "short_name": "Atendimento",
+      "url": "/atendimentos/create",
+      "icons": [
+        {
+          "src": "/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Novo Cliente",
+      "short_name": "Cliente",
+      "url": "/clientes/create",
+      "icons": [
+        {
+          "src": "/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

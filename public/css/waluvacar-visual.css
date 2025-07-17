@@ -1,0 +1,823 @@
+/* 🎨 WaLavacar - Sistema Visual Único e Otimizado */
+
+/* ================================================
+   🔴 PALETA DE CORES WA AUTO PREMIER OFICIAL
+   ================================================ */
+:root {
+    /* 🔴 Vermelhos WA Auto Premier */
+    --wa-red-primary: #C53030;      /* Primary */
+    --wa-red-secondary: #E53E3E;    /* Secondary */
+    --wa-red-dark: #9B2C2C;         /* Dark */
+    --wa-red-hover: #9B2C2C;        /* Hover state */
+    
+    /* ⚫ Pretos WA Auto Premier */
+    --wa-black-primary: #1A1A1A;    /* Primary */
+    --wa-black-secondary: #2D2D2D;  /* Secondary */
+    --wa-black-cards: #262626;      /* Cards */
+    
+    /* ⚪ Brancos WA Auto Premier */
+    --wa-white-primary: #FFFFFF;    /* Primary */
+    --wa-white-secondary: #F7FAFC;  /* Secondary */
+    --wa-white-muted: #E2E8F0;      /* Muted */
+    
+    /* 🎨 Cores de Status */
+    --wa-green: #10b981;            /* Sucesso */
+    --wa-orange: #f59e0b;           /* Progresso */
+    --wa-blue: #3b82f6;             /* Info */
+    --wa-yellow: #eab308;           /* Warning */
+    
+    /* 🌟 Sombras Premium */
+    --wa-shadow: 0 10px 15px -3px rgba(197, 48, 48, 0.1);
+    --wa-shadow-lg: 0 20px 25px -5px rgba(197, 48, 48, 0.15);
+    --wa-shadow-xl: 0 25px 50px -12px rgba(197, 48, 48, 0.25);
+    --wa-shadow-red: 0 0 20px rgba(197, 48, 48, 0.3);
+}
+
+/* ================================================
+   🌟 LAYOUT BASE COM FUNDO PRETO WA AUTO PREMIER
+   ================================================ */
+body {
+    background: var(--wa-black-primary) !important;
+    color: var(--wa-white-primary) !important;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.min-h-screen {
+    background: var(--wa-black-primary) !important;
+}
+
+/* ================================================
+   🎯 BOTÕES WA AUTO PREMIER OFICIAIS
+   ================================================ */
+
+/* 🔴 PRIMARY - Botão Principal com Gradiente Vermelho */
+.btn-wa-primary,
+.bg-gradient-to-r.from-red-600,
+.btn-primary-pro {
+    background: linear-gradient(135deg, var(--wa-red-primary), var(--wa-red-secondary)) !important;
+    border: none !important;
+    color: var(--wa-white-primary) !important;
+    font-weight: 700 !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    box-shadow: var(--wa-shadow-lg) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.btn-wa-primary:hover,
+.bg-gradient-to-r.from-red-600:hover,
+.btn-primary-pro:hover {
+    background: linear-gradient(135deg, var(--wa-red-dark), var(--wa-red-primary)) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--wa-shadow-red) !important;
+}
+
+/* ⚫ SECONDARY - Botão Secundário com Fundo Escuro e Borda Vermelha */
+.btn-wa-secondary {
+    background: var(--wa-black-secondary) !important;
+    border: 2px solid var(--wa-red-primary) !important;
+    color: var(--wa-white-primary) !important;
+    font-weight: 600 !important;
+    padding: 10px 22px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-wa-secondary:hover {
+    background: var(--wa-red-primary) !important;
+    border-color: var(--wa-red-secondary) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: var(--wa-shadow-lg) !important;
+}
+
+/* 🔍 OUTLINE - Botão Transparente com Borda Vermelha */
+.btn-wa-outline {
+    background: transparent !important;
+    border: 2px solid var(--wa-red-primary) !important;
+    color: var(--wa-red-primary) !important;
+    font-weight: 600 !important;
+    padding: 10px 22px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-wa-outline:hover {
+    background: var(--wa-red-primary) !important;
+    color: var(--wa-white-primary) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: var(--wa-shadow-lg) !important;
+}
+
+/* ================================================
+   🎨 CARDS E COMPONENTES WA AUTO PREMIER
+   ================================================ */
+
+/* Cards do sistema com cores oficiais */
+.wa-card, 
+.bg-gray-800 {
+    background: var(--wa-black-cards) !important;
+    border: 1px solid var(--wa-black-secondary) !important;
+    color: var(--wa-white-primary) !important;
+    border-radius: 12px !important;
+    box-shadow: var(--wa-shadow) !important;
+}
+
+/* ================================================
+   📊 COMPONENTES ESPECÍFICOS DO DASHBOARD
+   ================================================ */
+
+/* Círculos coloridos para estatísticas */
+.bg-red-600 { background: var(--wa-red-primary) !important; }
+.bg-green-600 { background: var(--wa-green) !important; }
+.bg-orange-600 { background: var(--wa-orange) !important; }
+.bg-yellow-600 { background: var(--wa-yellow) !important; }
+.bg-blue-600 { background: var(--wa-blue) !important; }
+.bg-purple-600 { background: #9333ea !important; }
+.bg-indigo-600 { background: #4f46e5 !important; }
+
+/* Bordas coloridas para status */
+.border-red-500 { border-color: var(--wa-red-primary) !important; }
+.border-green-500 { border-color: var(--wa-green) !important; }
+.border-orange-500 { border-color: var(--wa-orange) !important; }
+.border-blue-500 { border-color: var(--wa-blue) !important; }
+
+/* Texto colorido com cores WA Auto Premier */
+.text-red-400 { color: var(--wa-red-secondary) !important; }
+.text-green-400 { color: #4ade80 !important; }
+.text-orange-400 { color: #fb923c !important; }
+.text-blue-400 { color: #60a5fa !important; }
+.text-yellow-400 { color: #facc15 !important; }
+
+/* Botões de ação com gradientes */
+.bg-gradient-to-r.from-green-600 {
+    background: linear-gradient(135deg, var(--wa-green), #059669) !important;
+}
+
+.bg-gradient-to-r.from-orange-600 {
+    background: linear-gradient(135deg, var(--wa-orange), #d97706) !important;
+}
+
+.bg-gradient-to-r.from-blue-600 {
+    background: linear-gradient(135deg, var(--wa-blue), #2563eb) !important;
+}
+
+/* ================================================
+   🎨 ANIMAÇÕES E EFEITOS VISUAIS
+   ================================================ */
+
+/* Hover suave em cards */
+.hover-scale-card:hover {
+    transform: scale(1.02) translateY(-2px) !important;
+    box-shadow: var(--wa-shadow-xl) !important;
+}
+
+/* Animações de ícones */
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite !important;
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite !important;
+}
+
+/* Efeito shimmer para botões premium */
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.animate-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    animation: shimmer 2s infinite;
+}
+
+/* ================================================
+   📱 RESPONSIVIDADE MOBILE
+   ================================================ */
+
+/* Garantir que todos os botões sejam touch-friendly */
+@media (max-width: 768px) {
+    button, a.block {
+        min-height: 48px !important;
+        padding: 12px 16px !important;
+        font-size: 16px !important;
+    }
+    
+    /* Cards ocupam largura total no mobile */
+    .wa-card,
+    .bg-gray-800 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    
+    /* Textos legíveis no mobile */
+    .text-xs { font-size: 14px !important; }
+    .text-sm { font-size: 16px !important; }
+    .text-lg { font-size: 20px !important; }
+    .text-xl { font-size: 24px !important; }
+    .text-2xl { font-size: 28px !important; }
+    
+    /* Espaçamentos adequados para mobile */
+    .p-4 { padding: 16px !important; }
+    .p-6 { padding: 20px !important; }
+    .gap-4 { gap: 16px !important; }
+    .gap-6 { gap: 20px !important; }
+}
+
+/* ================================================
+   🔧 OVERRIDE DE TAILWIND PARA CORES WA AUTO PREMIER
+   ================================================ */
+
+/* Garantir que cores WA Auto Premier sempre prevaleçam */
+.bg-gray-900 { background: var(--wa-black-primary) !important; }
+.bg-gray-800 { background: var(--wa-black-cards) !important; }
+.bg-gray-700 { background: var(--wa-black-secondary) !important; }
+
+.text-white { color: var(--wa-white-primary) !important; }
+.text-gray-300 { color: var(--wa-white-muted) !important; }
+.text-gray-400 { color: var(--wa-white-secondary) !important; }
+
+/* Sombras com vermelho WA Auto Premier */
+.shadow-lg { box-shadow: var(--wa-shadow-lg) !important; }
+.shadow-xl { box-shadow: var(--wa-shadow-xl) !important; }
+
+/* ================================================
+   🎯 COMPONENTES ESPECIAIS WA AUTO PREMIER
+   ================================================ */
+
+/* Header personalizado com cores oficiais */
+.wa-page-header {
+    background: var(--wa-black-cards);
+    border-bottom: 2px solid var(--wa-red-primary);
+    padding: 16px;
+    box-shadow: var(--wa-shadow);
+}
+
+.wa-brand-text {
+    color: var(--wa-white-primary) !important;
+}
+
+/* Badge de posição na fila com vermelho oficial */
+.wa-position-badge {
+    background: linear-gradient(135deg, var(--wa-red-primary), var(--wa-red-secondary));
+    color: var(--wa-white-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: var(--wa-shadow-red);
+}
+
+/* Indicadores de status visuais com cores WA */
+.wa-status-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--wa-green), #059669);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.wa-status-bar.orange {
+    background: linear-gradient(90deg, var(--wa-orange), #d97706);
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.wa-status-bar.red {
+    background: linear-gradient(90deg, var(--wa-red-primary), var(--wa-red-secondary));
+    box-shadow: 0 2px 4px rgba(197, 48, 48, 0.3);
+}
+
+/* ================================================
+   📝 FORMULÁRIOS WA AUTO PREMIER
+   ================================================ */
+
+/* Seções de formulário */
+.wa-form-section {
+    background: var(--wa-black-cards);
+    border: 1px solid var(--wa-black-secondary);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--wa-shadow);
+}
+
+/* Títulos de seção */
+.wa-section-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--wa-white-primary);
+    margin-bottom: 16px;
+}
+
+/* Labels de formulário */
+.wa-form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--wa-white-secondary);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs de formulário */
+.wa-form-input {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    background: var(--wa-black-secondary) !important;
+    border: 2px solid var(--wa-black-primary) !important;
+    border-radius: 8px !important;
+    color: var(--wa-white-primary) !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.wa-form-input:focus {
+    outline: none !important;
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 0 0 4px rgba(197, 48, 48, 0.1) !important;
+    background: var(--wa-black-cards) !important;
+}
+
+.wa-form-input::placeholder {
+    color: var(--wa-white-muted) !important;
+}
+
+/* Grupos de formulário */
+.wa-form-group {
+    margin-bottom: 20px;
+}
+
+/* Cards de serviço */
+.wa-service-card {
+    background: var(--wa-black-cards);
+    border-color: var(--wa-black-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+.wa-service-card:hover {
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: var(--wa-shadow-lg) !important;
+    background: var(--wa-black-secondary);
+}
+
+/* === CARDS MOBILE SERVIÇOS === */
+.wa-card-mobile {
+    background: rgba(31, 41, 55, 0.8) !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    transition: all 0.3s ease !important;
+}
+
+.wa-card-mobile:hover {
+    border-color: rgba(239, 68, 68, 0.4) !important;
+    background: rgba(31, 41, 55, 0.9) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.wa-badge-green {
+    background: rgba(34, 197, 94, 0.2) !important;
+    color: rgb(74, 222, 128) !important;
+    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    padding: 4px 8px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+.wa-badge-red {
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: rgb(248, 113, 113) !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    padding: 4px 8px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+.wa-badge-blue {
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: rgb(96, 165, 250) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    padding: 4px 8px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+/* === CARDS DE SERVIÇOS - ATENDIMENTOS === */
+.wa-service-card {
+    background: rgba(31, 41, 55, 0.6) !important;
+    border: 2px solid rgba(75, 85, 99, 0.6) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.wa-service-card:hover {
+    border-color: rgba(239, 68, 68, 0.6) !important;
+    background: rgba(31, 41, 55, 0.8) !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+.wa-service-card input[type="checkbox"]:checked + div {
+    opacity: 1 !important;
+}
+
+.wa-service-card input[type="checkbox"]:checked {
+    background-color: #ef4444 !important;
+    border-color: #ef4444 !important;
+}
+
+.wa-service-card input[type="checkbox"]:checked ~ div::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(34, 197, 94, 0.1)) !important;
+    border-radius: 12px !important;
+    pointer-events: none !important;
+}
+
+/* Otimizações para mobile */
+@media (max-width: 640px) {
+    .wa-service-card {
+        margin-bottom: 12px !important;
+        padding: 16px !important;
+    }
+    
+    .wa-service-card h4 {
+        font-size: 18px !important;
+        line-height: 1.3 !important;
+    }
+    
+    .wa-service-card p {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+    
+    .wa-service-card input[type="checkbox"] {
+        width: 24px !important;
+        height: 24px !important;
+        margin-top: 2px !important;
+    }
+}
+
+/* === CHECKBOXES CUSTOMIZADOS === */
+.wa-checkbox {
+    width: 20px !important;
+    height: 20px !important;
+    appearance: none !important;
+    background: #374151 !important;
+    border: 2px solid #ef4444 !important;
+    border-radius: 4px !important;
+    position: relative !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    flex-shrink: 0 !important;
+}
+
+.wa-checkbox:checked {
+    background: #ef4444 !important;
+    border-color: #dc2626 !important;
+}
+
+.wa-checkbox:checked::after {
+    content: '✓' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    color: white !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.wa-checkbox:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3) !important;
+}
+
+.wa-checkbox-label {
+    margin-left: 12px !important;
+    color: #f3f4f6 !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    line-height: 1.4 !important;
+    font-size: 14px !important;
+}
+
+.checkmark-emoji {
+    margin-right: 6px !important;
+    font-size: 16px !important;
+}
+
+/* Otimizações mobile para checkboxes */
+@media (max-width: 640px) {
+    .wa-checkbox {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    .wa-checkbox:checked::after {
+        font-size: 12px !important;
+    }
+    
+    .wa-checkbox-label {
+        font-size: 14px !important;
+        margin-left: 10px !important;
+    }
+    
+    .checkmark-emoji {
+        font-size: 14px !important;
+        margin-right: 4px !important;
+    }
+}
+
+/* Fix para garantir que Tailwind não interfira */
+.wa-checkbox {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+/* ================================================
+   💡 OTIMIZAÇÕES DE PERFORMANCE
+   ================================================ */
+
+/* Usar transform3d para otimizar animações */
+.hover-scale-card:hover {
+    transform: scale3d(1.02, 1.02, 1) translateZ(0) !important;
+    will-change: transform !important;
+}
+
+/* Otimizar renders de ícones */
+iconify-icon {
+    will-change: auto !important;
+    transform: translateZ(0) !important;
+}
+
+/* ================================================
+   🎨 TOQUES FINAIS DO VISUAL WA AUTO PREMIER
+   ================================================ */
+
+/* Scrollbar customizada com vermelho oficial */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--wa-black-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--wa-red-primary), var(--wa-red-secondary));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--wa-red-secondary), var(--wa-red-dark));
+}
+
+/* Seleção de texto com vermelho WA Auto Premier */
+::selection {
+    background: var(--wa-red-primary);
+    color: var(--wa-white-primary);
+}
+
+/* Focus states com vermelho oficial */
+button:focus,
+a:focus,
+input:focus,
+select:focus {
+    outline: 2px solid var(--wa-red-primary) !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 4px rgba(197, 48, 48, 0.1) !important;
+}
+
+/* ================================================
+   📱 PWA OPTIMIZATIONS
+   ================================================ */
+
+/* Garantir que o app funcione bem como PWA */
+@media (display-mode: standalone) {
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* === BOTÕES DE AÇÃO SERVIÇOS === */
+.btn-premium-micro {
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border: 2px solid !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 40px !important;
+    min-height: 36px !important;
+}
+
+.btn-premium-micro:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Estados específicos dos botões de toggle */
+.btn-toggle-activate {
+    background: rgba(34, 197, 94, 0.15) !important;
+    color: #4ade80 !important;
+    border-color: rgba(34, 197, 94, 0.4) !important;
+}
+
+.btn-toggle-activate:hover {
+    background: rgba(34, 197, 94, 0.25) !important;
+    border-color: rgba(34, 197, 94, 0.6) !important;
+}
+
+.btn-toggle-deactivate {
+    background: rgba(251, 191, 36, 0.15) !important;
+    color: #fbbf24 !important;
+    border-color: rgba(251, 191, 36, 0.4) !important;
+}
+
+.btn-toggle-deactivate:hover {
+    background: rgba(251, 191, 36, 0.25) !important;
+    border-color: rgba(251, 191, 36, 0.6) !important;
+}
+
+/* Mobile specific adjustments for action buttons */
+@media (max-width: 640px) {
+    .btn-premium-micro {
+        padding: 6px 8px !important;
+        min-width: 36px !important;
+        min-height: 32px !important;
+        font-size: 12px !important;
+    }
+    
+    .service-actions {
+        gap: 6px !important;
+    }
+    
+    .btn-wa-primary,
+    .btn-wa-secondary {
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+    }
+}
+
+/* ================================================
+   🗑️ ESTILO ESPECIAL PARA ÍCONE DE LIXEIRA
+   ================================================ */
+.btn-delete-trash {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-delete-trash iconify-icon {
+    filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6)) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-delete-trash:hover iconify-icon {
+    filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.8)) !important;
+    transform: scale(1.1) !important;
+}
+
+.btn-delete-trash:hover {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Animação de pulsar para destacar */
+@keyframes trash-pulse {
+    0%, 100% { 
+        transform: scale(1); 
+        filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
+    }
+    50% { 
+        transform: scale(1.05); 
+        filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.8));
+    }
+}
+
+.btn-delete-trash:focus iconify-icon {
+    animation: trash-pulse 1.5s infinite !important;
+}
+
+/* ================================================
+   🗑️ BOTÕES DE EXCLUSÃO OTIMIZADOS PARA MOBILE
+   ================================================ */
+
+/* Botão de lixeira - versão mobile otimizada */
+.btn-trash-mobile {
+    background: rgba(220, 38, 38, 0.5) !important;
+    border: 2px solid rgba(239, 68, 68, 0.7) !important;
+    color: #fca5a5 !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 8px rgba(220, 38, 38, 0.2) !important;
+}
+
+.btn-trash-mobile:hover,
+.btn-trash-mobile:active {
+    background: rgba(220, 38, 38, 0.7) !important;
+    border-color: rgba(239, 68, 68, 1) !important;
+    color: #ffffff !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 12px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* Ícones de lixeira - garantindo visibilidade */
+.btn-trash-mobile iconify-icon {
+    font-size: 20px !important;
+    color: inherit !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Força exibição de ícones no mobile */
+@media (max-width: 768px) {
+    .btn-trash-mobile iconify-icon,
+    iconify-icon[icon*="trash"] {
+        font-size: 22px !important;
+        color: #fca5a5 !important;
+        display: inline-block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 10 !important;
+    }
+    
+    .btn-trash-mobile:hover iconify-icon,
+    .btn-trash-mobile:active iconify-icon {
+        color: #ffffff !important;
+    }
+    
+    /* Garante que todos os botões de ação sejam touch-friendly */
+    .btn-trash-mobile,
+    button[onclick*="confirmarExclusao"] {
+        min-width: 48px !important;
+        min-height: 48px !important;
+        padding: 12px !important;
+        touch-action: manipulation !important;
+        -webkit-tap-highlight-color: rgba(220, 38, 38, 0.3) !important;
+    }
+}
+
+/* ================================================
+   📱 MELHORIAS GERAIS PARA ICONIFY NO MOBILE
+   ================================================ */
+
+/* Força carregamento de ícones */
+@media (max-width: 768px) {
+    iconify-icon {
+        display: inline-block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        font-style: normal !important;
+    }
+    
+    /* Backup para ícones que não carregaram */
+    iconify-icon[icon*="trash-2"]:empty::before {
+        content: "🗑️" !important;
+        font-size: 18px !important;
+        display: inline-block !important;
+    }
+}

@@ -1,0 +1,673 @@
+/* WA Auto Premier - Template Base para Todas as Views */
+
+/* Aplicar tema WA automaticamente a todas as páginas */
+.wa-theme-global {
+    /* Backgrounds padrão */
+    background: var(--wa-black-primary) !important;
+    color: var(--wa-white-primary) !important;
+}
+
+/* Tabelas com tema WA padrão */
+.wa-table {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.wa-table thead {
+    background: var(--wa-black-secondary) !important;
+}
+
+.wa-th {
+    background: var(--wa-black-secondary) !important;
+    color: var(--wa-red-primary) !important;
+    border-bottom: 2px solid var(--wa-red-primary) !important;
+    padding: 16px 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    font-size: 0.875rem !important;
+    text-align: left;
+}
+
+.wa-td {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+    border-bottom: 1px solid rgba(197, 48, 48, 0.2) !important;
+    padding: 12px !important;
+    vertical-align: middle !important;
+    white-space: nowrap;
+}
+
+.wa-tr {
+    transition: all 0.2s ease;
+}
+
+.wa-tr:hover {
+    background: rgba(197, 48, 48, 0.1) !important;
+    transform: translateX(2px);
+}
+
+.wa-table-row {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+    border: 1px solid rgba(107, 114, 128, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.wa-table-row:hover {
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 4px 12px rgba(197, 48, 48, 0.2) !important;
+}
+
+/* Formulários com tema WA */
+.wa-form-group {
+    margin-bottom: 24px;
+}
+
+.wa-form-label {
+    color: var(--wa-white-primary) !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+    display: block;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wa-form-input,
+.wa-form-select,
+.wa-form-textarea {
+    background: var(--wa-black-secondary) !important;
+    border: 1px solid rgba(197, 48, 48, 0.3) !important;
+    color: var(--wa-white-primary) !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    width: 100% !important;
+    transition: all 0.3s ease !important;
+    font-size: 0.875rem;
+}
+
+.wa-form-input:focus,
+.wa-form-select:focus,
+.wa-form-textarea:focus {
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.2) !important;
+    outline: none !important;
+    background: var(--wa-black-light) !important;
+}
+
+.wa-form-input::placeholder,
+.wa-form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Classes específicas para formulários WA */
+.wa-form-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--wa-black-secondary) !important;
+    border: 2px solid rgba(197, 48, 48, 0.3) !important;
+    border-radius: 8px;
+    color: var(--wa-white-primary) !important;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.wa-form-input:focus {
+    outline: none;
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.1) !important;
+}
+
+.wa-form-select {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--wa-black-secondary) !important;
+    border: 2px solid rgba(197, 48, 48, 0.3) !important;
+    border-radius: 8px;
+    color: var(--wa-white-primary) !important;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.wa-form-select:focus {
+    outline: none;
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.1) !important;
+}
+
+/* Cards padrão WA */
+.wa-card-default {
+    background: var(--wa-black-card);
+    border: 1px solid rgba(197, 48, 48, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    color: var(--wa-white-primary);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.wa-card-default:hover {
+    border-color: var(--wa-red-primary);
+    box-shadow: 0 12px 40px rgba(197, 48, 48, 0.3);
+    transform: translateY(-2px);
+}
+
+.wa-card-header {
+    border-bottom: 1px solid rgba(197, 48, 48, 0.2);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.wa-card-title {
+    color: var(--wa-white-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.wa-card-title iconify-icon {
+    color: var(--wa-red-primary);
+    margin-right: 8px;
+}
+
+/* Status badges WA */
+.wa-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wa-badge-success {
+    background: var(--wa-success);
+    color: white;
+}
+
+.wa-badge-warning {
+    background: var(--wa-warning);
+    color: white;
+}
+
+.wa-badge-error {
+    background: var(--wa-error);
+    color: white;
+}
+
+.wa-badge-info {
+    background: var(--wa-info);
+    color: white;
+}
+
+.wa-badge-pending {
+    background: var(--wa-red-primary);
+    color: white;
+}
+
+/* Classes para badges/etiquetas WA */
+.wa-badge-blue {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: #60A5FA !important;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.wa-badge-green {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: rgba(34, 197, 94, 0.2) !important;
+    color: #4ADE80 !important;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.wa-badge-red {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: #F87171 !important;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* Alerts WA */
+.wa-alert {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border-left: 4px solid;
+}
+
+.wa-alert-success {
+    background: rgba(56, 161, 105, 0.1);
+    border-left-color: var(--wa-success);
+    color: #68d391;
+}
+
+.wa-alert-error {
+    background: rgba(229, 62, 62, 0.1);
+    border-left-color: var(--wa-error);
+    color: #fc8181;
+}
+
+.wa-alert-warning {
+    background: rgba(214, 158, 46, 0.1);
+    border-left-color: var(--wa-warning);
+    color: #f6e05e;
+}
+
+.wa-alert-info {
+    background: rgba(49, 130, 206, 0.1);
+    border-left-color: var(--wa-info);
+    color: #63b3ed;
+}
+
+/* Classes para alertas WA */
+.wa-alert-success {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: rgba(34, 197, 94, 0.1) !important;
+    border: 1px solid rgba(34, 197, 94, 0.3) !important;
+    border-radius: 8px;
+    color: #4ADE80 !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.wa-alert-error {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: rgba(239, 68, 68, 0.1) !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    border-radius: 8px;
+    color: #F87171 !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Headers de página WA */
+.wa-page-header {
+    background: var(--wa-black-card);
+    border: 1px solid rgba(197, 48, 48, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.wa-page-title {
+    color: var(--wa-white-primary);
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    background: linear-gradient(135deg, var(--wa-red-primary) 0%, var(--wa-white-primary) 50%, var(--wa-red-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wa-page-subtitle {
+    color: var(--wa-white-secondary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Paginação WA */
+.wa-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.wa-pagination a,
+.wa-pagination span {
+    padding: 8px 12px;
+    background: var(--wa-black-secondary);
+    border: 1px solid rgba(197, 48, 48, 0.3);
+    color: var(--wa-white-primary);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.wa-pagination a:hover {
+    background: var(--wa-red-primary);
+    border-color: var(--wa-red-primary);
+}
+
+.wa-pagination .active {
+    background: var(--wa-red-primary) !important;
+    border-color: var(--wa-red-primary) !important;
+}
+
+/* Classes para paginação WA */
+.wa-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.wa-pagination .pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wa-pagination .page-link {
+    padding: 8px 12px;
+    background: var(--wa-black-secondary) !important;
+    border: 1px solid rgba(197, 48, 48, 0.3) !important;
+    border-radius: 6px;
+    color: var(--wa-white-primary) !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.wa-pagination .page-link:hover {
+    background: rgba(197, 48, 48, 0.2) !important;
+    border-color: var(--wa-red-primary) !important;
+}
+
+.wa-pagination .page-item.active .page-link {
+    background: var(--wa-red-primary) !important;
+    border-color: var(--wa-red-primary) !important;
+    color: white !important;
+}
+
+/* Alerts WA */
+.wa-alert {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border-left: 4px solid;
+}
+
+.wa-alert-success {
+    background: rgba(56, 161, 105, 0.1);
+    border-left-color: var(--wa-success);
+    color: #68d391;
+}
+
+.wa-alert-error {
+    background: rgba(229, 62, 62, 0.1);
+    border-left-color: var(--wa-error);
+    color: #fc8181;
+}
+
+.wa-alert-warning {
+    background: rgba(214, 158, 46, 0.1);
+    border-left-color: var(--wa-warning);
+    color: #f6e05e;
+}
+
+.wa-alert-info {
+    background: rgba(49, 130, 206, 0.1);
+    border-left-color: var(--wa-info);
+    color: #63b3ed;
+}
+
+/* Breadcrumb WA */
+.wa-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding: 12px 0;
+}
+
+.wa-breadcrumb a {
+    color: var(--wa-white-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.wa-breadcrumb a:hover {
+    color: var(--wa-red-primary);
+}
+
+.wa-breadcrumb iconify-icon {
+    color: var(--wa-white-muted);
+    font-size: 0.875rem;
+}
+
+/* Loading states WA */
+.wa-loading {
+    background: linear-gradient(90deg, 
+        var(--wa-black-secondary) 0%, 
+        var(--wa-red-primary) 50%, 
+        var(--wa-black-secondary) 100%
+    );
+    background-size: 200% 100%;
+    animation: wa-loading 1.5s infinite;
+}
+
+@keyframes wa-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Empty states WA */
+.wa-empty {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--wa-white-secondary);
+}
+
+.wa-empty iconify-icon {
+    font-size: 4rem;
+    color: var(--wa-red-primary);
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.wa-empty h3 {
+    color: var(--wa-white-primary);
+    margin-bottom: 8px;
+}
+
+.wa-empty p {
+    color: var(--wa-white-secondary);
+    margin-bottom: 24px;
+}
+
+/* Card de serviço específico */
+.wa-service-card {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+    border: 2px solid rgba(107, 114, 128, 0.3) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.wa-service-card:hover {
+    border-color: var(--wa-red-primary) !important;
+    box-shadow: 0 4px 20px rgba(197, 48, 48, 0.3) !important;
+    transform: scale(1.02) !important;
+}
+
+/* Checkbox personalizado WA */
+.wa-service-card input[type="checkbox"] {
+    accent-color: var(--wa-red-primary) !important;
+    background: var(--wa-black-secondary) !important;
+    border: 2px solid var(--wa-red-primary) !important;
+}
+
+.wa-service-card input[type="checkbox"]:checked {
+    background: var(--wa-red-primary) !important;
+    border-color: var(--wa-red-primary) !important;
+}
+
+.wa-service-card input[type="checkbox"]:focus {
+    box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.2) !important;
+}
+
+/* Classes de botões WA específicas */
+.wa-button-red {
+    background: var(--wa-red-primary) !important;
+    color: white !important;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+}
+
+.wa-button-green {
+    background: rgba(34, 197, 94, 0.8) !important;
+    color: white !important;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+}
+
+.wa-button-yellow {
+    background: rgba(245, 158, 11, 0.8) !important;
+    color: white !important;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .wa-card-default {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .wa-table th,
+    .wa-table td {
+        padding: 8px !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .wa-page-header {
+        padding: 16px;
+    }
+    
+    .wa-page-title {
+        font-size: 1.5rem;
+    }
+    
+    .wa-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .wa-btn-sm {
+        justify-content: center;
+    }
+}
+
+/* Auto-aplicar tema em elementos comuns */
+body {
+    background: var(--wa-black-primary) !important;
+    color: var(--wa-white-primary) !important;
+}
+
+/* Override do Tailwind para garantir tema WA */
+.bg-white {
+    background: var(--wa-black-card) !important;
+}
+
+.text-gray-900 {
+    color: var(--wa-white-primary) !important;
+}
+
+.text-gray-600 {
+    color: var(--wa-white-secondary) !important;
+}
+
+.text-gray-500 {
+    color: var(--wa-white-muted) !important;
+}
+
+.border-gray-200 {
+    border-color: rgba(197, 48, 48, 0.2) !important;
+}
+
+.border-gray-300 {
+    border-color: rgba(197, 48, 48, 0.3) !important;
+}
+
+/* Força aplicação de tema escuro em todas as tabelas */
+table, 
+.table,
+table.min-w-full,
+.min-w-full,
+div[class*="bg-white"],
+div[class*="bg-gray-50"],
+div[class*="bg-blue-50"],
+div[class*="bg-green-50"] {
+    background: var(--wa-black-card) !important;
+    color: var(--wa-white-primary) !important;
+}
+
+/* Força cores de texto escuras para brancas */
+.text-gray-900,
+.text-gray-800,
+.text-gray-700,
+.text-black {
+    color: var(--wa-white-primary) !important;
+}
+
+/* Força bordas escuras */
+.divide-gray-200 > * {
+    border-color: rgba(197, 48, 48, 0.2) !important;
+}
+
+.border-gray-200,
+.border-gray-300,
+.border-blue-200,
+.border-green-200 {
+    border-color: rgba(197, 48, 48, 0.3) !important;
+}
+
+/* Força backgrounds específicos */
+.bg-gradient-to-br.from-blue-50.to-blue-100,
+.bg-gradient-to-br.from-green-50.to-green-100,
+.bg-gradient-to-br.from-yellow-50.to-yellow-100 {
+    background: var(--wa-black-card) !important;
+    border: 2px solid rgba(197, 48, 48, 0.3) !important;
+}
