@@ -2,11 +2,11 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "npm ci && npm run build && composer install --no-dev --optimize-autoloader"
+    "buildCommand": "npm ci && npm run build && composer install --no-dev --optimize-autoloader && mkdir -p database && touch database/database.sqlite"
   },
   "deploy": {
     "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10,
-    "startCommand": "bash start-railway.sh"
+    "restartPolicyMaxRetries": 5,
+    "startCommand": "php artisan config:cache && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT"
   }
 }

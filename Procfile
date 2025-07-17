@@ -1,2 +1,2 @@
-web: bash start-railway.sh
-release: touch database/database.sqlite && php artisan migrate --force
+web: bash debug-railway.sh
+release: mkdir -p database && touch database/database.sqlite
