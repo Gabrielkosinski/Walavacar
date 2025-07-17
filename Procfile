@@ -1,2 +1,2 @@
-web: php artisan serve --host=0.0.0.0 --port=$PORT
-release: php artisan migrate --force
+web: bash start-railway.sh
+release: touch database/database.sqlite && php artisan migrate --force
