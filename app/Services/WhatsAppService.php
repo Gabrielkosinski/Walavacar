@@ -158,7 +158,7 @@ class WhatsAppService
             'nome_empresa' => 'Auto Premier Detalhes Automotivos WA',
             'filial' => 'Matriz',
             'telefone_contato' => '(41) 99687-5650',
-            'whatsapp_business' => '5541996875650',
+            'whatsapp_business' => env('WHATSAPP_BUSINESS_NUMBER', '5541996875650'),
             'horario_funcionamento' => 'Segunda a Sábado, das 8h às 18h',
             'endereco' => 'R. Leila Diniz, 162 - Maria Antonieta, Pinhais - PR, 83331-210'
         ];

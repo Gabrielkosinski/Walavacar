@@ -11,13 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        // 🔒 Middleware de segurança global
-        $middleware->web(append: [
-            \App\Http\Middleware\SecurityHeaders::class,
-        ]);
-        
-        // 🚦 Rate limiting para APIs
+        // � Rate limiting básico apenas
         $middleware->throttleApi();
+        
+        // �🔒 Middleware de segurança comentado para Railway debug
+        // $middleware->web(append: [
+        //     \App\Http\Middleware\SecurityHeaders::class,
+        // ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

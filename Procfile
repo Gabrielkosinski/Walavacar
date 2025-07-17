@@ -1,2 +1,1 @@
-web: bash debug-railway.sh
-release: mkdir -p database && touch database/database.sqlite
+web: php artisan serve --host=0.0.0.0 --port=$PORT
