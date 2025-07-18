@@ -1,3 +1,7 @@
+// Rota de teste para ver se o Laravel está respondendo
+Route::get('/health', function () {
+    return 'ok';
+});
 <?php
 
 use App\Http\Controllers\ProfileController;
@@ -118,3 +122,12 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// ROTA TEMPORÁRIA PARA DEBUG DO LOG
+Route::get('/debug-log', function () {
+    $logPath = storage_path('logs/laravel.log');
+    if (file_exists($logPath)) {
+        return response()->file($logPath);
+    }
+    return 'Log não encontrado!';
+});
