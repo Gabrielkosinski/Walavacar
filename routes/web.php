@@ -87,8 +87,38 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
-    // Rotas do sistema de gestão
+    // Adiciona rotas resource para atendimentos
     Route::resource('atendimentos', AtendimentoController::class);
+    Route::post('atendimentos/json', [AtendimentoController::class, 'storeJson'])->name('atendimentos.store-json');
+    Route::resource('clientes', ClienteController::class);
+    Route::resource('carros', CarroController::class);
+    Route::resource('servicos', ServicoController::class);
+    Route::patch('servicos/{servico}/toggle-status', [ServicoController::class, 'toggleStatus'])->name('servicos.toggle-status');
+    Route::resource('relatorios', RelatorioController::class);
+    Route::get('/relatorios/exportar/pdf', [RelatorioController::class, 'exportarPdf'])->name('relatorios.exportar-pdf');
+    
+    // Rotas de controle de despesas
+    Route::resource('despesas', DespesaController::class);
+    Route::get('/despesas/relatorio/index', [DespesaController::class, 'relatorio'])->name('despesas.relatorio');
+    Route::patch('/despesas/{despesa}/marcar-paga', [DespesaController::class, 'marcarComoPaga'])->name('despesas.marcar-paga');
+    
+    // Rota para consultar dados do veículo pela placa
+    Route::get('api/carros/consultar-placa', [CarroController::class, 'consultarPlaca'])->name('carros.consultar-placa');
+    
+    // Rotas para controle de fila
+    Route::post('/atendimentos/chamar-proximo', [AtendimentoController::class, 'chamarProximo'])->name('atendimentos.chamar-proximo');
+    Route::get('/atendimentos/fila', [AtendimentoController::class, 'obterFila'])->name('atendimentos.fila');
+    
+    // Rotas específicas para finalização e pagamento
+    Route::patch('/atendimentos/{atendimento}/finalizar', [AtendimentoController::class, 'finalizar'])->name('atendimentos.finalizar');
+    Route::patch('/atendimentos/{atendimento}/cancelar', [AtendimentoController::class, 'cancelar'])->name('atendimentos.cancelar');
+    Route::patch('/atendimentos/{atendimento}/pagar', [AtendimentoController::class, 'registrarPagamento'])->name('atendimentos.pagar');
+    Route::get('/atendimentos/{atendimento}/comprovante', [AtendimentoController::class, 'gerarComprovante'])->name('atendimentos.comprovante');
+    
+    // 📱 Rota para visualizar templates do WhatsApp
+    Route::get('/whatsapp/templates', function() {
+        return view('whatsapp.templates');
+    })->middleware(['auth', 'verified'])->name('whatsapp.templates');
     Route::post('atendimentos/json', [AtendimentoController::class, 'storeJson'])->name('atendimentos.store-json');
     Route::resource('clientes', ClienteController::class);
     Route::resource('carros', CarroController::class);

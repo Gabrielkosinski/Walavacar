@@ -235,12 +235,11 @@ class Atendimento extends Model
     
     public function scopeFaturamentoMes($query, $mes = null, $ano = null)
     {
-        $mes = $mes ?? now()->month;
-        $ano = $ano ?? now()->year;
-        
+        $mes = $mes ?? now()->format('m');
+        $ano = $ano ?? now()->format('Y');
+        $mesAno = $ano . '-' . str_pad($mes, 2, '0', STR_PAD_LEFT);
         return $query->where('status', 'pago')
-            ->whereMonth('data_pagamento', $mes)
-            ->whereYear('data_pagamento', $ano);
+            ->whereRaw("strftime('%Y-%m', data_pagamento) = ?", [$mesAno]);
     }
     
     // ⏱️ SISTEMA DE CRONOMETRAGEM AUTOMÁTICA

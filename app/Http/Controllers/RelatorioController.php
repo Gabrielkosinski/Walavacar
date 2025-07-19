@@ -245,12 +245,9 @@ class RelatorioController extends Controller
         // Últimos 6 meses
         for ($i = 5; $i >= 0; $i--) {
             $data = Carbon::now()->subMonths($i);
-            
-            // Usar função compatível com SQLite
             $valor = Atendimento::whereRaw("strftime('%Y-%m', created_at) = ?", [$data->format('Y-m')])
                 ->where('status', '!=', 'cancelado')
                 ->sum('valor');
-                
             $meses[] = $data->format('M/Y');
             $valores[] = (float) $valor;
         }
@@ -490,9 +487,10 @@ class RelatorioController extends Controller
         $dataInicio = $request->filled('data_inicio') ? $request->data_inicio : Carbon::now()->startOfMonth();
         $dataFim = $request->filled('data_fim') ? $request->data_fim : Carbon::now()->endOfMonth();
         
-        $despesas = Despesa::whereBetween('data_despesa', [$dataInicio, $dataFim])
-            ->where('status', 'paga');
-            
+        $despesas = Despesa::whereRaw("date(data_despesa) >= ? and date(data_despesa) <= ?", [
+            Carbon::parse($dataInicio)->format('Y-m-d'),
+            Carbon::parse($dataFim)->format('Y-m-d')
+        ])->where('status', 'paga');
         return [
             'total_despesas' => $despesas->sum('valor'),
             'despesas_fixas' => $despesas->where('tipo', 'fixa')->sum('valor'),
