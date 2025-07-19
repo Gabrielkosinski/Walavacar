@@ -26,11 +26,11 @@ class DashboardController extends Controller
         try {
             // 🚀 Cache para estatísticas básicas (5 minutos)
             $estatisticas = Cache::remember('dashboard_stats', 300, function () {
+                $mesAtual = now()->format('Y-m');
                 return [
                     'total_atendimentos' => Atendimento::count(),
                     'atendimentos_hoje' => Atendimento::whereDate('created_at', today())->count(),
-                    'faturamento_mes' => Atendimento::whereMonth('created_at', now()->month)
-                        ->whereYear('created_at', now()->year)
+                    'faturamento_mes' => Atendimento::whereRaw("strftime('%Y-%m', created_at) = ?", [$mesAtual])
                         ->sum('valor') ?: 0,
                     'clientes_ativos' => Cliente::count()
                 ];
@@ -38,18 +38,18 @@ class DashboardController extends Controller
             
             // 💰 Estatísticas de pagamento do dia
             $estatisticasPagamento = Cache::remember('dashboard_pagamento_stats', 300, function () {
-                $hoje = today();
+                $hoje = today()->format('Y-m-d');
                 return [
-                    'total_recebido_hoje' => Atendimento::whereDate('data_pagamento', $hoje)
+                    'total_recebido_hoje' => Atendimento::whereRaw("date(data_pagamento) = ?", [$hoje])
                         ->where('pago', true)
                         ->sum('valor_pago') ?: 0,
-                    'pagamentos_por_forma' => Atendimento::whereDate('data_pagamento', $hoje)
+                    'pagamentos_por_forma' => Atendimento::whereRaw("date(data_pagamento) = ?", [$hoje])
                         ->where('pago', true)
                         ->selectRaw('forma_pagamento, COUNT(*) as quantidade, SUM(valor_pago) as total')
                         ->groupBy('forma_pagamento')
                         ->get()
                         ->keyBy('forma_pagamento'),
-                    'atendimentos_pagos_hoje' => Atendimento::whereDate('data_pagamento', $hoje)
+                    'atendimentos_pagos_hoje' => Atendimento::whereRaw("date(data_pagamento) = ?", [$hoje])
                         ->where('pago', true)
                         ->count(),
                     'pendentes_pagamento' => Atendimento::whereIn('status', ['pronto', 'aguardando_pagamento'])
