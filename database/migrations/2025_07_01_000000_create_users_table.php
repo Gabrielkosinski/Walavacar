@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('tipo', ['admin', 'gerente', 'funcionario'])->default('funcionario');
+            $table->foreignId('filial_id')->nullable()->constrained('filials')->nullOnDelete();
             $table->rememberToken();
             $table->timestamps();
         });
