@@ -1,4 +1,4 @@
 [build]
-  command = "composer install && php artisan migrate --force"
+  command = "npm install && npm run build && composer install && php artisan migrate --force"
 [start]
   command = "php artisan serve --host=0.0.0.0 --port=8080"
