@@ -12,7 +12,9 @@ WORKDIR /app
 COPY --from=nodebuild /app /app
 
 # Instale dependências do PHP conforme necessário
-RUN apt-get update && apt-get install -y unzip git
+RUN apt-get update \
+    && apt-get install -y unzip git libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql pgsql
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --optimize-autoloader
 
