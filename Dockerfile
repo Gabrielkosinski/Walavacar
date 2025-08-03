@@ -17,4 +17,16 @@ RUN apt-get update \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --optimize-autoloader
 
-CMD ["php-fpm"]
+# Instale o Nginx
+RUN apt-get update && apt-get install -y nginx
+
+# Adicione configuração básica do Nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Script de entrypoint para rodar PHP-FPM e Nginx juntos
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+EXPOSE 80
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
