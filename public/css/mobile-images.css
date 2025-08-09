@@ -1,0 +1,84 @@
+/* ==============================================
+   MOBILE RESPONSIVE IMAGES - WaLavacar
+   ============================================== */
+
+/* Imagens responsivas globais */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+/* Containers de imagem */
+.img-container,
+.image-container,
+.foto-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Imagens em cards/perfis */
+.card img,
+.profile-img,
+.user-avatar {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ==============================================
+   MOBILE BREAKPOINTS
+   ============================================== */
+
+/* Mobile (até 768px) */
+@media (max-width: 768px) {
+    img {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    
+    /* Imagens em botões/ícones */
+    .btn img,
+    .button img,
+    svg {
+        max-width: 24px !important;
+        max-height: 24px !important;
+    }
+    
+    /* Logos */
+    .logo img,
+    .brand-logo img {
+        max-width: 200px !important;
+        height: auto !important;
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media (max-width: 480px) {
+    img {
+        max-width: 100% !important;
+        width: auto !important;
+    }
+    
+    .btn img,
+    .button img,
+    svg {
+        max-width: 20px !important;
+        max-height: 20px !important;
+    }
+    
+    .logo img {
+        max-width: 150px !important;
+    }
+}
+
+/* Força responsividade em imagens inline */
+img[style*="width"],
+img[style*="height"] {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+}

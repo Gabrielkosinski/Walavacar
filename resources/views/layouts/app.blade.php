@@ -22,6 +22,9 @@
         <!-- 🎨 WaLavacar - Sistema Visual Único e Otimizado -->
         <link rel="stylesheet" href="{{ asset('css/waluvacar-visual.css') }}">
         
+        <!-- 📱 Mobile Images - Responsividade -->
+        <link rel="stylesheet" href="{{ asset('css/mobile-images.css') }}">
+        
         <!-- Scripts do Laravel/Vite -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         

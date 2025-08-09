@@ -17,6 +17,9 @@
         <!-- WaLavacar Theme -->
         <link rel="stylesheet" href="{{ asset('css/wa-theme.css') }}">
         
+        <!-- 📱 Mobile Images - Responsividade -->
+        <link rel="stylesheet" href="{{ asset('css/mobile-images.css') }}">
+        
         <style>
             :root {
                 --wa-red-primary: #C53030;
