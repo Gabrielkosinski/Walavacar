@@ -1,7 +1,4 @@
-RUN chmod -R 775 storage bootstrap/cache && \
-    chown -R www-data:www-data storage bootstrap/cache    RUN chmod -R 775 storage bootstrap/cache && \
-        chown -R www-data:www-data storage bootstrap/cache    RUN chmod -R 775 storage bootstrap/cache && \
-        chown -R www-data:www-data storage bootstrap/cache# Etapa 1: Build dos assets com Node.js
+# Etapa 1: Build dos assets com Node.js
 FROM node:20 AS nodebuild
 WORKDIR /app
 COPY package*.json ./
