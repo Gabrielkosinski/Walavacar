@@ -12,7 +12,7 @@ COPY --from=nodebuild /app /app
 
 # Instale dependências do PHP conforme necessário
 RUN apt-get update \
-    && apt-get install -y unzip git libpq-dev netcat-traditional \
+    && apt-get install -y unzip git libpq-dev netcat-traditional gettext-base \
     && docker-php-ext-install pdo pdo_pgsql pgsql
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --optimize-autoloader
@@ -29,6 +29,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-EXPOSE 80
+EXPOSE ${PORT:-80}
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
