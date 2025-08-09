@@ -16,7 +16,7 @@ if [ -z "$APP_KEY" ]; then
     echo "APP_KEY não definida, gerando nova chave..."
     php artisan key:generate --force --show
 else
-    echo "APP_KEY já definida: ${APP_KEY:0:20}..."
+    echo "APP_KEY já definida"
 fi
 
 # Verifica conexão com banco
