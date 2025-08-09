@@ -10,10 +10,18 @@ php artisan cache:clear
 php artisan route:clear
 php artisan view:clear
 
-# Gera chave da aplicação se não existir
+# Verifica se APP_KEY existe, se não gera uma nova
+echo "Verificando APP_KEY..."
 if [ -z "$APP_KEY" ]; then
-    php artisan key:generate --force
+    echo "APP_KEY não definida, gerando nova chave..."
+    php artisan key:generate --force --show
+else
+    echo "APP_KEY já definida: ${APP_KEY:0:20}..."
 fi
+
+# Verifica conexão com banco
+echo "Testando conexão com banco de dados..."
+php artisan migrate --pretend || echo "Aviso: Erro ao testar migração"
 
 # Inicia PHP-FPM em background
 php-fpm &
