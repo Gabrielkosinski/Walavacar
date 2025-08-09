@@ -1,4 +1,7 @@
-# Etapa 1: Build dos assets com Node.js
+RUN chmod -R 775 storage bootstrap/cache && \
+    chown -R www-data:www-data storage bootstrap/cache    RUN chmod -R 775 storage bootstrap/cache && \
+        chown -R www-data:www-data storage bootstrap/cache    RUN chmod -R 775 storage bootstrap/cache && \
+        chown -R www-data:www-data storage bootstrap/cache# Etapa 1: Build dos assets com Node.js
 FROM node:20 AS nodebuild
 WORKDIR /app
 COPY package*.json ./
@@ -16,6 +19,8 @@ RUN apt-get update \
     && docker-php-ext-install pdo pdo_pgsql pgsql
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --optimize-autoloader
+RUN chmod -R 775 storage bootstrap/cache && \
+    chown -R www-data:www-data storage bootstrap/cache
 
 # Instale o Nginx
 RUN apt-get update && apt-get install -y nginx
