@@ -28,5 +28,10 @@ class AppServiceProvider extends ServiceProvider
         // 🇧🇷 Configurar localização brasileira
         Carbon::setLocale('pt_BR');
         setlocale(LC_TIME, 'pt_BR.UTF-8', 'pt_BR', 'portuguese');
+        
+        // 🔒 Forçar HTTPS em produção
+        if (config('app.env') === 'production') {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
     }
 }
