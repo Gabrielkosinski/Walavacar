@@ -1,7 +1,7 @@
 <?php
 
 // 🔒 Middleware para forçar HTTPS em produção
-// Adicione este arquivo em app/Http/Middleware/ForceHttps.php
+// Modificado para Railway - proxy handle HTTPS externamente
 
 namespace App\Http\Middleware;
 
@@ -12,14 +12,14 @@ class ForceHttps
 {
     public function handle(Request $request, Closure $next)
     {
-        // Forçar HTTPS em produção
-        if (app()->environment('production') && !$request->isSecure()) {
-            return redirect()->secure($request->getRequestUri(), 301);
-        }
-
-        // Configurar headers para HTTPS
+        // No Railway, o proxy externo lida com HTTPS
+        // Apenas definir URL scheme, sem forçar redirect
         if (app()->environment('production')) {
             \URL::forceScheme('https');
+            
+            // Definir headers para indicar HTTPS
+            $request->server->set('HTTPS', 'on');
+            $request->server->set('SERVER_PORT', 443);
         }
 
         return $next($request);
