@@ -1,22 +1,30 @@
 #!/bin/bash
 
-# 🔒 CORRIGIR MIXED CONTENT - HTTPS Railway
-echo "🔒 Corrigindo Mixed Content no Railway..."
-
-echo "📋 EXECUTE ESTES COMANDOS NO RAILWAY:"
+echo "🔒 CORREÇÃO DO LOOP HTTPS ENVIADA"
+echo "================================="
 echo ""
-
-echo "1️⃣ CONFIGURAR APP_URL COM HTTPS:"
-echo "railway variables set APP_URL=https://web-production-9622.up.railway.app"
+echo "❌ Problema identificado:"
+echo "  • Código 301 (redirect permanente) em loop"
+echo "  • Middleware ForceHttps forçando redirects"
+echo "  • Railway usa proxy externo para HTTPS"
 echo ""
-
-echo "2️⃣ FORÇAR HTTPS NOS ASSETS:"
-echo "railway variables set ASSET_URL=https://web-production-9622.up.railway.app"
+echo "✅ Correção aplicada:"
+echo "  • Removido redirect forçado do middleware"
+echo "  • Mantida configuração URL::forceScheme"
+echo "  • Headers HTTPS definidos sem redirect"
 echo ""
-
-echo "3️⃣ CONFIGURAR PROXY CONFIÁVEL:"
-echo "railway variables set TRUSTED_PROXIES=*"
+echo "📊 Resultado esperado:"
+echo "  • Códigos 200 em vez de 301"
+echo "  • Login funcionando normalmente"
+echo "  • Páginas carregando sem loop"
+echo "  • HTTPS mantido externamente"
 echo ""
+echo "🔍 Para verificar (após 2-3 min):"
+echo "  1. Logs devem mostrar 200/302 em vez de 301"
+echo "  2. https://walavacar-production.up.railway.app/login"
+echo "  3. admin@admin.com / admin123"
+echo ""
+echo "⏱️ Deploy em andamento..."
 
 echo "4️⃣ LIMPAR CACHE:"
 echo "railway run php artisan config:clear"

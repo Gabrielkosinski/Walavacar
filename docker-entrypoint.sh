@@ -23,6 +23,17 @@ fi
 echo "Testando conexão com banco de dados..."
 php artisan migrate --pretend || echo "Aviso: Erro ao testar migração"
 
+# 🔥 FORÇA CRIAÇÃO DO USUÁRIO ADMIN
+echo "🔥 Executando migração forçada do admin..."
+php artisan migrate --force || echo "Aviso: Erro nas migrações"
+
+echo "🔥 Criando usuário admin via comando personalizado..."
+php artisan admin:create --force || echo "Aviso: Erro ao criar admin"
+
+# Verifica se admin foi criado
+echo "🔍 Verificando se admin existe..."
+php artisan tinker --execute="echo 'Admin existe: ' . (DB::table('users')->where('email', 'admin@admin.com')->exists() ? 'SIM' : 'NÃO');"
+
 # Inicia PHP-FPM em background
 php-fpm &
 
