@@ -1,12 +1,5 @@
 <?php
 
-use I    ->withMiddleware(function (Middleware $middleware): void {
-        // ⚡ Rate limiting básico apenas
-        $middleware->throttleApi();
-        
-        // 🔒 Forçar HTTPS em produção
-<?php
-
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -25,19 +18,6 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->web(append: [
             \App\Http\Middleware\ForceHttps::class,
         ]);
-    })
-    ->withExceptions(function (Exceptions $exceptions): void {
-        //
-    })->create();
-    )
-    ->withMiddleware(function (Middleware $middleware): void {
-        // � Rate limiting básico apenas
-        $middleware->throttleApi();
-        
-        // �🔒 Middleware de segurança comentado para Railway debug
-        // $middleware->web(append: [
-        //     \App\Http\Middleware\SecurityHeaders::class,
-        // ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
